@@ -8,6 +8,7 @@ const buildHtml = require('./src/htmlBuilder');
 const team = [];
 
 const queryLeader = async()=>{
+    //ask the basic questions
     const {name, id, email, role} = await inquirer.prompt([
         {type:"input", name:"name", message:"Employee's Name:"},
         {type:"input", name:"id", message:"Employee's ID:"},
@@ -15,7 +16,8 @@ const queryLeader = async()=>{
         {type:"list", name:"role", message:"Emplyee's Role:", choices:["Manager", "Engineer", "Intern"]}
     ]);
 
-    let obj = {};
+    let obj = {}; //declare employee object outside of the switch block
+    //ask a unique question and instantiate employee, depending on the role assigned
     switch(role){
         case "Manager": 
         const {office} = await inquirer.prompt([{type:"input", name:"office", message:`${name}'s office number:`}]);
@@ -31,8 +33,13 @@ const queryLeader = async()=>{
         obj = new Intern(name, id, email, school);
         break;
     };
-    team.push(obj);
+
+    team.push(obj); // add employee to the team
+
+    // ask if they want to add another
     const {more} = await inquirer.prompt([{type:"confirm", name:"more", message:"Add another employee?",default:true}]);
+
+    //repeat if they do, otherwise write the html
     if (more){
         queryLeader();
     }else{
@@ -40,4 +47,5 @@ const queryLeader = async()=>{
     }
 }
 
+//start asking
 queryLeader();
