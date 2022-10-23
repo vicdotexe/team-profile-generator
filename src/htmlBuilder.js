@@ -12,18 +12,18 @@ const buildHtml = (team)=>{
         if (employee instanceof Manager){
             return `Office number: ${employee.getOfficeNumber()}`;}
         if (employee instanceof Engineer){
-            return `GitHub: <a href="https://www.github.com/${employee.getGithub()}">${employee.getGithub()}</a>`;}
+            return `GitHub: <a href="https://www.github.com/${employee.getGithub()}" target="_blank">${employee.getGithub()}</a>`;}
         if (employee instanceof Intern){
             return `School: ${employee.getSchool()}`;}
     };
 
     /** Make a copy of the card-template html and replace all the temporary values with employee data */
     const makeCard = (employee) =>{
-        return cardTemp.replace(/name/g, employee.getName())
-        .replace(/role/g, employee.getRole())
-        .replace(/id/g, employee.getId())
-        .replace(/email/g, employee.getEmail())
-        .replace(/unique/g, generateUnique(employee));
+        return cardTemp.replace(/v~name/g, employee.getName())
+        .replace(/v~role/g, employee.getRole())
+        .replace(/v~id/g, employee.getId())
+        .replace(/v~email/g, employee.getEmail())
+        .replace(/v~unique/g, generateUnique(employee));
     };
 
     // loop through the team and add all the card html together
