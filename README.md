@@ -22,7 +22,7 @@ node index.js
 ## Usage
 The application will begin prompting the user for questions about their team members. Upon completion, a 'team.html' will be generated in the 'output' directory.
 
-[![Watch the video](./assets/screenshot.PNG)](https://watch.screencastify.com/v/RcM1nynzfOZ2hTGgNnEH)
+[![Watch the video](./assets/screenshot.PNG)](https://watch.screencastify.com/v/pNE5UFp1r14PDiBY3OfP)
 
 ## Contributing
 Contributions are welcome. You can contact me through the information below.
