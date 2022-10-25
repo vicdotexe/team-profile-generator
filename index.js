@@ -43,7 +43,7 @@ const queryLeader = async()=>{
     if (more){
         queryLeader();
     }else{
-        fs.writeFile('./output/team-profiles.html', buildHtml(team), ()=>{});
+        fs.writeFile('./output/team.html', buildHtml(team), ()=>{});
     }
 }
 

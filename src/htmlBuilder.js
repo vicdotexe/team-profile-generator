@@ -12,7 +12,7 @@ const buildHtml = (team)=>{
         if (employee instanceof Manager){
             return `Office number: ${employee.getOfficeNumber()}`;}
         if (employee instanceof Engineer){
-            return `GitHub: <a href="https://www.github.com/${employee.getGithub()}" target="_blank">${employee.getGithub()}</a>`;}
+            return `GitHub: <a href="https://www.github.com/${employee.getGithub()}" target="_blank" class="text-blue-500">${employee.getGithub()}</a>`;}
         if (employee instanceof Intern){
             return `School: ${employee.getSchool()}`;}
     };
