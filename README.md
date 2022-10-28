@@ -28,7 +28,7 @@ The application will begin prompting the user for questions about their team mem
 Contributions are welcome. You can contact me through the information below.
 
 ## Tests
-There is a [sample-team.html](/output/sample-README.md) file in the output directory. 
+There is a [sample-team.html](/output/sample-team.html) file in the output directory. 
 
 ## License
 The Team Profile Generator project is under the [MIT License](http://choosealicense.com/licenses/mit/). See the link for more details.
